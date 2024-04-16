@@ -12,8 +12,13 @@
 swim = int(input("Please enter your time in minutes for the 1 Km swim : "))
 cycle = int(input("Please enter your time in minutes for the 10 Km cycle : "))
 run = int(input("Please enter your time in minutes for the 10 Km run : "))
-total_time = swim + cycle + run
-print("Thank you! Your total time was ", total_time, " minutes. ")
+total_time = swim + cycle + run  #in minutes
+
+# Changing total_time variable into hours and minutes as per Issue-1
+hours = total_time//60
+minutes = total_time % 60
+print()
+print("Thank you! Your total time was ", hours, "hour(s) and", minutes, "minutes. ")
 
 # Part 2 - Now let's work out what prize the athlete gets :
 if total_time < 100 :
