@@ -33,7 +33,9 @@ elif choice == "mortgages":    # HOME LOANS OR MORTGAGES
     house_value = int(input("Please enter the present value of the house : "))
     interest = int(input("Please enter the interest rate product you want : "))
     int_month = (interest/100)/12
-    term = int(input("Over what length of time in months do you plan to repay the mortgage : "))
+    # Issue-1 Changing the requested input from months to years to avoid confusion
+    term_yr = int(input("Over what length of time in years do you plan to repay the mortgage : "))
+    term = term_yr * 12
     repayment = (int_month*house_value)/(1-(1+int_month)**(-term))
     repay = round(repayment,2)
     print("You will need to pay", repay, "per month, to pay off your mortgage.")
